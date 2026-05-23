@@ -1,0 +1,20 @@
+meta:
+  environment: nodejs
+  toolchain:
+    name: npm
+    version: "20"
+build:
+  skip: false
+  command: npx prisma generate && npm run build
+  additionalCommands: null
+  artifacts:
+    "dist/**": /
+    "node_modules/**": /
+run:
+  scriptName: start:prod
+  scriptArguments: null
+  nodeArguments: null
+  command: npm run start:prod
+  persistenceMount: /data
+  containerPort: "80"
+  servicePort: "80"
