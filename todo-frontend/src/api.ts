@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://sixty-taxis-bathe.loca.lt',
+  baseURL: 'http://localhost:3000', 
+  
   withCredentials: true, 
 });
 
